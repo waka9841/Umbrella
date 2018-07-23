@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'input_done/index'
-  get 'input_done/show'
+  post 'input_done/show'
   get 'register_done/index'
   get 'register_done/show'
   get 'register/index'
