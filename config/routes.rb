@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :top
+  root 'top#index'
+  get 'top/index'
+  get 'input/createtable'
+  get 'input/reset'
+  post 'register/show'
+  post 'register/done'
+  post 'input/show'
+  post 'input/done'
 end

@@ -1,0 +1,15 @@
+<h1>合言葉の登録</h1>
+<% if @umbrellaCount > 0 %>
+<%= form_for :post, url: '/input/done' do |f| %>
+<p>
+  <%= f.text_field :uuid, placeholder: '合言葉を入力してください' %>
+  <%= f.hidden_field :location, :value => params[:post][:location] %>
+</p>
+<p>
+  <%= f.submit('登録') %>
+</p>
+<% end %>
+<% else %>
+<p>申し訳ありません、貸出可能な傘が現在ありません</p>
+<% end %>
+<%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]) %>

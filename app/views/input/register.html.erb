@@ -1,0 +1,11 @@
+<h1>Input#show</h1>
+<p>Find me in app/views/input/show.html.erb</p>
+<%= form_for :post, url: '/input/done' do |f| %>
+<p>
+  <%= f.text_field :uuid, placeholder: '合言葉を入力してください' %>
+  <%= f.hidden_field :location, :value => params[:location] %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

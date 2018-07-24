@@ -1,0 +1,2 @@
+module RegisterDoneHelper
+end
