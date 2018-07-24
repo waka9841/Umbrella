@@ -15,8 +15,10 @@ ActiveRecord::Schema.define(version: 2018_07_16_084156) do
   create_table "kasas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "state"
     t.boolean "lend"
+    t.bigint "location_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_kasas_on_location_id"
   end
 
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -28,8 +30,12 @@ ActiveRecord::Schema.define(version: 2018_07_16_084156) do
   end
 
   create_table "tokens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "location_id", null: false
+    t.string "uuid"
+    t.datetime "expired_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_tokens_on_location_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
