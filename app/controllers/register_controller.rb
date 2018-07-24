@@ -1,24 +1,34 @@
 class RegisterController < ApplicationController
-  def index
-  end
-
   def show
   end
 
   def done
   	@validate = tokenCheck(params[:post][:uuid], params[:post][:location])
-  	@location = Location.find_by_id(params[:post][:location])
-  	@dbToken = @location.tokens.find_by_uuid(params[:post][:uuid])
+  	@location = Location.find_by(id: params[:post][:location])
+  	@kasa_id = lendUmbrella(@location.kasas.where(state: 1))
   end
 
   private
   def tokenCheck(postToken, location)
-  	@location = Location.find_by_id(location)
-  	@dbToken = @location.tokens.find_by_uuid(postToken)
-  	return @dbToken ? expiredCheck(@dbToken) : false
+  	@location = Location.find_by(id: location)
+  	@tokens = @location.tokens.where(uuid: postToken)
+  	return expiredCheck(@tokens) ? true : false
   end
 
-  def expiredCheck(token)
-  	return token.expired_at > Time.now ? true : false
+  def expiredCheck(tokens)
+  	tokens.each do |token|
+  		if token.expired_at > Time.now
+  			token.expired_at = Time.now
+  			token.save
+  			return true
+  		end
+  	end
+  	return false
+  end
+
+  def lendUmbrella(kasas)
+  	kasas.first.state = 2
+  	kasas.first.save
+  	return kasas.first.id
   end
 end

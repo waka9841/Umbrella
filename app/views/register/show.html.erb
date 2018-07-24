@@ -1,11 +1,11 @@
-<h1>Register#show</h1>
-<p>Find me in app/views/register/show.html.erb</p>
+<h1>合言葉を入力</h1>
 <%= form_for :post, url: '/register/done' do |f| %>
 <p>
   <%= f.text_field :uuid, placeholder: '合言葉を入力してください' %>
-  <%= f.hidden_field :location, :value => params[:location] %>
+  <%= f.hidden_field :location, :value => params[:post][:location] %>
 </p>
 <p>
-  <%= f.submit %>
+  <%= f.submit('認証') %>
 </p>
 <% end %>
+<%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]) %>

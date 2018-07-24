@@ -1,9 +1,12 @@
 <html>
 <title>完了</title>
+<p><%= @validate %></p>
 <% if @validate %>
 <h2>認証ができました</h2>
+<p>No.<%= @kasa_id %>を貸し出しします。</p>
 <% else %>
 <h2>認証ができませんでした</h2>
 <p>合言葉が正しくないか、認証時間を過ぎてしまっています。</p>
 <% end %>
+<%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]) %>
 </html>

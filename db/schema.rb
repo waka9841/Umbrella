@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2018_07_16_084156) do
 
   create_table "kasas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "state"
-    t.boolean "lend"
     t.bigint "location_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
