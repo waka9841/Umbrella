@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :top
+  root 'top#index'
   get 'input_done/index'
   get 'input_done/show'
   get 'register_done/index'
@@ -9,5 +11,4 @@ Rails.application.routes.draw do
   get 'input/show'
   get 'top/index'
   get 'top/show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
