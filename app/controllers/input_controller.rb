@@ -14,5 +14,6 @@ class InputController < ApplicationController
   def done
   	@result = params[:post][:uuid]
   	@location = Location.find_by_id(params[:post][:location])
+  	@location.tokens.create(uuid: @result, expired_at: 10.minutes.since)
   end
 end
