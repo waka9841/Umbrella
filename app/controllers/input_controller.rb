@@ -6,7 +6,7 @@ class InputController < ApplicationController
   	for num in 1..10 do
   		@location1.kasas.create(state: 1)
   		@location2.kasas.create(state: 1)
-  		@location3.kasas.create(state: 1)  		
+  		@location3.kasas.create(state: 1)
   	end
   end
 
