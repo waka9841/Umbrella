@@ -1,3 +1,298 @@
+<body class="index-page sidebar-collapse" id="home">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+    <!-- 試し　-->
+      <div class="navbar-translate header_logo">
+            <img src="/assets/logo.png" class="logo_image">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+      </div>
+      <!-- menu -->
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="index.html" data-original-title="go to top page">
+                トップページ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#howto" data-original-title="go to how to contents page">
+                使い方
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#character" data-original-title="got to character page">
+                特徴
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#inputs" data-original-title="go to contact page">
+                お問い合わせ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" data-original-title="Follow us on Instagram">
+                マイページ/会員登録
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end menu -->
+    </div>
+  </nav>
+  <div class="page-header header-filter clear-filter" data-parallax="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <!-- site title -->
+          <div class="brand">
+            <div class="index_copylight">
+              <img src="./assets/img/copyright.png">
+            </div>
+            <div class="row">
+              <div class="col intro_first">
+                <a href="first_login.html">
+                  <button class="btn btn-info btn-round">合言葉を登録する</button>
+                </a>
+              </div>
+              <div class="col intro_second">
+                <a href="second_login.html">
+                  <button class="btn btn-rose btn-round">合言葉を入力する</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+        <!-- intoro -->
+        <div class="container">
+          <div class="introduction">
+            <div class="row" id="howto">
+              <div class="col-12">
+                <h5>使い方１</h5>
+              </div>
+              <div class="col-12">
+                <h5>使い方２</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end intro -->
+        <!-- character -->
+        <div class="container">
+          <div class="introduction" id="character">
+            <p class="service_title">サービスの特徴</p>
+            <!-- character 1 -->
+            <div class="row character_content">
+              <div class="col-4 intro_left_image">
+                <p>左側：図版</p>
+              </div>
+              <div class="col-8 intro_right">
+                <p class="sub_titel">雨の日が、大切な日に</p>
+                <p class="intro_text">誰もが憧れて、でもできないのが相合傘。
+                このサービスを使えば、雨の日に特別な
+                思い出を作ることができます。
+                </p>
+              </div>
+            </div>
+            <!-- character 2 -->
+            <div class="row character_content">
+              <div class="col-8 intro_left">
+                <p class="sub_titel">傘はもう持ち歩かない</p>
+                <p class="intro_text">無料で借りられるから、傘を持ち歩く必要がありません。
+                  手荷物を減らし、気兼ねなく２人の時間を楽しむ事ができます。
+                </p>
+              </div>
+              <div class="col-4 intro_right_image">
+                <p>左側：図版</p>
+              </div>
+            </div>
+            <!-- character 3 -->
+            <div class="row character_content">
+              <div class="col-4 intro_left_image">
+                <p>左側：図版</p>
+              </div>
+              <div class="col-8 intro_right">
+                <p class="sub_titel">急な雨も安心です</p>
+                <p class="intro_text">帰りやデート中に急な雨が降っても安心です。
+                  このサービスをご利用いただければ、雨の時間が特別なものになります。
+                </p>
+              </div>
+            </div>
+            <!-- intro_button -->
+            <div class="row">
+              <div class="col-12 intro_first">
+                <%= form_for :post, url: '/input/show' do |f| %>
+				<p>
+				  <%= f.hidden_field :location, :value => params[:location] %>
+				</p>
+				<p>
+				  <%= f.submit '合言葉を登録', :class => "btn btn-info btn-round" %>
+				</p>
+				<% end %>
+              </div>
+              <div class="col-12 intro_second">
+                <%= form_for :post, url: '/input/show' do |f| %>
+				<p>
+				  <%= f.hidden_field :location, :value => params[:location] %>
+				</p>
+				<p>
+				  <%= f.submit '合言葉を登録', :class => "btn btn-info btn-round" %>
+				</p>
+				<% end %>
+                <a href="second_login.html">
+                  <button class="btn btn-rose btn-round">合言葉を入力する</button>
+                </a>
+              </div>
+            </div>
+            <!-- end intro_button -->
+          </div>
+        </div>
+        <!-- end character -->
+        <!--inputs -->
+        <div id="inputs">
+          <div class="inputs_title">
+            <p class="inputs_text">お問い合わせ</p>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="お名前">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group has-default">
+                <input type="text" class="form-control" placeholder="返信先メールアドレス">
+              </div>
+            </div>
+            <div class="col-12 has-default">
+              <div class="form-group textarea">
+                <textarea type="text" class="form-control" placeholder="お問い合わせ内容"></textarea>
+              </div>
+            </div>
+            <div class="col-12 has-default btn-send-box">
+              <button class="btn btn-round btn-send">送信する</button>
+            </div>
+          </div>
+        </div>
+        <!--end inputs -->
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, GMO Technology BootCamp Create by Team-G.
+      </div>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--	Plugin for Sharrre btn -->
+  <script src="./assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-kit.js?v=2.0.4" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+    });
+
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+
+
+    $(document).ready(function() {
+
+      $('#facebook').sharrre({
+        share: {
+          facebook: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('facebook');
+        },
+        template: '<i class="fab fa-facebook-f"></i> Facebook',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#googlePlus').sharrre({
+        share: {
+          googlePlus: true
+        },
+        enableCounter: false,
+        enableHover: false,
+        enableTracking: true,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('googlePlus');
+        },
+        template: '<i class="fab fa-google-plus"></i> Google',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#twitter').sharrre({
+        share: {
+          twitter: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        buttons: {
+          twitter: {
+            via: 'CreativeTim'
+          }
+        },
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('twitter');
+        },
+        template: '<i class="fab fa-twitter"></i> Twitter',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+    });
+  </script>
+</body>
+
 <h1>相合傘</h1>
 <%= form_for :post, url: '/input/show' do |f| %>
 <p>

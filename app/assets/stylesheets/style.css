@@ -1,0 +1,248 @@
+/* original */
+
+body{
+  background-color: #fff;
+}
+
+/* header */
+
+#home .navbar{
+  background-color: #fff !important;
+}
+.navbar.navbar-transparent{
+  background-color: #3B3F3F !important;
+  padding-top: 10px;
+}
+
+.logo_image {
+  margin: 0 auto 0 38%;
+}
+
+
+
+/* main view */
+.index_copylight{
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.service_title{
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+
+.character_content{
+  padding-bottom: 75px;
+}
+
+.sub_titel{
+  font-size: 17px;
+  color: #E9517E;
+  font-weight: 500;
+}
+
+.intro_text{
+  font-size: 14px;
+}
+
+
+/* contact form */
+
+#inputs{
+  background-color: #01B4D2;
+  padding-bottom: 30px;
+}
+
+.inputs_title{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  margin-top: 200px;
+}
+
+.inputs_text{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.form-control {
+  background: #fff;
+  margin: 0 auto;
+  width: 92%;
+}
+
+.form-control,
+.is-focused .form-control {
+  background: #fff;
+  margin: 0 auto;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.bmd-form-group{
+  padding-top: 12px;
+}
+
+
+/* contact btm */
+
+.btn-send-box{
+  text-align: center;
+}
+
+.btn-send{
+  color: #555;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
+}
+
+/* .btn-send:hover{
+  color: #555;
+  background-color: yellow;
+  border-color: #fff;
+} */
+
+
+
+
+/* button index second position */
+
+.intro_first{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* .btn.btn-info.btn-round{
+  width: 100%;
+} */
+
+
+.intro_second{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* .btn.btn-rose.btn-round{
+  width: 100%;
+} */
+
+
+
+/* ====================================== */
+
+
+
+/* others page setteing */
+
+
+.others_header{
+  color: #fff;
+}
+
+.others_header p{
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.header_mid{
+  position: absolute;
+  right: 30%;
+  top: 0;
+}
+
+.header_mid_finish{
+  position: absolute;
+  right: 45%;
+  top: 0;
+}
+
+.lead_text{
+  font-size: 14px;
+  text-align: center;
+}
+
+.back{
+  font-size: 12px;
+  text-align: center;
+}
+
+/* .btn-next{
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+} */
+
+/* .btn-next2{
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+} */
+
+.link_text_small{
+  font-size: 12px;
+  text-align: center;
+}
+
+/* input underline*/
+.underline_green{
+  border-bottom: 1px solid #00B4D2;
+}
+
+.underline_pink{
+  border-bottom: 1px solid #E9517E;
+}
+
+/* finish titel text */
+.register_number{
+  font-size: 40px;
+  text-align: center;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+.first_finish_color{
+  color: #00B4D2;
+}
+
+.second_finish_color{
+  color: #E9517E;
+}
+
+.announce.firstline{
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.announce{
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+
+.introduction.finish_page p{
+  margin: 0px;
+}
+
+.text_link{
+  text-decoration: none;
+}
+
+.text_link:visited{
+  color: #555;
+}
+
+/* resister list */
+
+.rental{
+  margin-top: 50px;
