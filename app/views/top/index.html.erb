@@ -60,15 +60,25 @@
               <img src="./assets/img/copyright.png">
             </div>
             <div class="row">
-              <div class="col intro_first">
-                <a href="first_login.html">
-                  <button class="btn btn-info btn-round">合言葉を登録する</button>
-                </a>
+              <div class="col-12 intro_first">
+                <%= form_for :post, url: '/input/show' do |f| %>
+				<p>
+				  <%= f.hidden_field :location, :value => params[:location] %>
+				</p>
+				<p>
+				  <%= f.submit '合言葉を登録する', :class => "btn btn-info btn-round" %>
+				</p>
+				<% end %>
               </div>
-              <div class="col intro_second">
-                <a href="second_login.html">
-                  <button class="btn btn-rose btn-round">合言葉を入力する</button>
-                </a>
+              <div class="col-12 intro_second">
+                <%= form_for :post, url: '/register/show' do |f| %>
+				<p>
+				  <%= f.hidden_field :location, :value => params[:location] %>
+				</p>
+				<p>
+				  <%= f.submit '合言葉を入力する', :class => "btn btn-rose btn-round" %>
+				</p>
+				<% end %>
               </div>
             </div>
           </div>
@@ -142,22 +152,19 @@
 				  <%= f.hidden_field :location, :value => params[:location] %>
 				</p>
 				<p>
-				  <%= f.submit '合言葉を登録', :class => "btn btn-info btn-round" %>
+				  <%= f.submit '合言葉を登録する', :class => "btn btn-info btn-round" %>
 				</p>
 				<% end %>
               </div>
               <div class="col-12 intro_second">
-                <%= form_for :post, url: '/input/show' do |f| %>
+                <%= form_for :post, url: '/register/show' do |f| %>
 				<p>
 				  <%= f.hidden_field :location, :value => params[:location] %>
 				</p>
 				<p>
-				  <%= f.submit '合言葉を登録', :class => "btn btn-info btn-round" %>
+				  <%= f.submit '合言葉を入力する', :class => "btn btn-rose btn-round" %>
 				</p>
 				<% end %>
-                <a href="second_login.html">
-                  <button class="btn btn-rose btn-round">合言葉を入力する</button>
-                </a>
               </div>
             </div>
             <!-- end intro_button -->
@@ -292,21 +299,3 @@
     });
   </script>
 </body>
-
-<h1>相合傘</h1>
-<%= form_for :post, url: '/input/show' do |f| %>
-<p>
-  <%= f.hidden_field :location, :value => params[:location] %>
-</p>
-<p>
-  <%= f.submit('合言葉を登録') %>
-</p>
-<% end %>
-<%= form_for :post, url: '/register/show' do |f| %>
-<p>
-  <%= f.hidden_field :location, :value => params[:location] %>
-</p>
-<p>
-  <%= f.submit('合言葉を入力') %>
-</p>
-<% end %>
