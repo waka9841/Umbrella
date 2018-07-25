@@ -6,6 +6,7 @@ class RegisterController < ApplicationController
   	@validate = tokenCheck(params[:post][:uuid], params[:post][:location])
   	@location = Location.find_by(id: params[:post][:location])
   	@kasa_id = lendUmbrella(@location.kasas.where(state: 1))
+  	@returnDate = 7.days.since.strftime("%Y年%m月%d日")
   end
 
   private
