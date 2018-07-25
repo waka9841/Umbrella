@@ -21,38 +21,38 @@
           </div>
         </div>
     <!-- menu -->
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <%= link_to "トップページ", top_index_path(location: params[:post][:location]) %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#howto" data-original-title="go to how to contents page">
-              使い方
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#character" data-original-title="got to character page">
-              特徴
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#inputs" data-original-title="go to contact page">
-              お問い合わせ
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" data-original-title="Follow us on Instagram">
-              マイページ/会員登録
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+      <%= link_to "トップページ", top_index_path(location: params[:post][:location]), :class => 'nav-link', :rel => 'tooltip', :dataplacement => 'bottom', :dataoriginaltitle => 'go to top page' %>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#howto" data-original-title="go to how to contents page">
+                使い方
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#character" data-original-title="got to character page">
+                特徴
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#inputs" data-original-title="go to contact page">
+                お問い合わせ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" data-original-title="Follow us on Instagram">
+                マイページ/会員登録
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       <!-- end menu -->
     </div>
   </nav>
