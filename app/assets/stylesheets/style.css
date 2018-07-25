@@ -15,12 +15,20 @@ body{
 }
 
 .logo_image {
-  margin: 0 auto 0 38%;
+  margin: 0 auto 0 36.6%;
 }
 
 
 
 /* main view */
+.index-page .page-header{
+  height: 500px;
+}
+
+.index_drop{
+  text-align: center;
+}
+
 .index_copylight{
   padding-bottom: 20px;
   text-align: center;
@@ -31,11 +39,35 @@ body{
   color: #000;
   text-align: center;
   font-weight: 500;
+  padding-bottom: 30px;
+}
+
+.section{
+  padding: 15px 0;
+}
+
+.flow_image{
+  padding: 0px;
+  margin-bottom: 90px;
+}
+
+
+.character_content{
+  padding-bottom: 30px;
+}
+
+.row.character_content.last{
   padding-bottom: 50px;
 }
 
-.character_content{
-  padding-bottom: 75px;
+
+
+.col-4.intro_left_image{
+  padding-right: 0px;
+}
+
+.col-4.intro_right_image{
+  padding-left: 0px;
 }
 
 .sub_titel{
@@ -48,6 +80,11 @@ body{
   font-size: 14px;
 }
 
+.col-6{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 /* contact form */
 
@@ -58,7 +95,7 @@ body{
 
 .inputs_title{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  margin-top: 200px;
+  margin-top: 30px;
 }
 
 .inputs_text{
@@ -90,7 +127,9 @@ body{
   padding-top: 12px;
 }
 
-
+textarea{
+  height: 100px;
+}
 /* contact btm */
 
 .btn-send-box{

@@ -56,11 +56,14 @@
         <div class="col-md-8 ml-auto mr-auto">
           <!-- site title -->
           <div class="brand">
+            <div class="index_drop">
+              <img src="/assets/drop.png">
+            </div>
             <div class="index_copylight">
-              <img src="/assets/img/copyright.png">
+              <img src="/assets/copyright.png">
             </div>
             <div class="row">
-              <div class="col-12 intro_first">
+              <div class="col-6 intro_first">
                 <%= form_for :post, url: '/input/show' do |f| %>
 				<p>
 				  <%= f.hidden_field :location, :value => params[:location] %>
@@ -70,7 +73,7 @@
 				</p>
 				<% end %>
               </div>
-              <div class="col-12 intro_second">
+              <div class="col-6 intro_second">
                 <%= form_for :post, url: '/register/show' do |f| %>
 				<p>
 				  <%= f.hidden_field :location, :value => params[:location] %>
@@ -93,11 +96,9 @@
         <div class="container">
           <div class="introduction">
             <div class="row" id="howto">
-              <div class="col-12">
-                <h5>使い方１</h5>
+              <div class="col-12 flow_image">
+                <img src="/assets/flow.svg">
               </div>
-              <div class="col-12">
-                <h5>使い方２</h5>
               </div>
             </div>
           </div>
@@ -110,7 +111,7 @@
             <!-- character 1 -->
             <div class="row character_content">
               <div class="col-4 intro_left_image">
-                <p>左側：図版</p>
+                <img src="/assets/chara01.png" >
               </div>
               <div class="col-8 intro_right">
                 <p class="sub_titel">雨の日が、大切な日に</p>
@@ -129,13 +130,13 @@
                 </p>
               </div>
               <div class="col-4 intro_right_image">
-                <p>左側：図版</p>
+                <img src="/assets/chara02.png" >
               </div>
             </div>
             <!-- character 3 -->
-            <div class="row character_content">
+            <div class="row character_content last">
               <div class="col-4 intro_left_image">
-                <p>左側：図版</p>
+                <img src="/assets/chara03.png" >
               </div>
               <div class="col-8 intro_right">
                 <p class="sub_titel">急な雨も安心です</p>
@@ -146,7 +147,7 @@
             </div>
             <!-- intro_button -->
             <div class="row">
-              <div class="col-12 intro_first">
+              <div class="col-6 intro_first">
                 <%= form_for :post, url: '/input/show' do |f| %>
 				<p>
 				  <%= f.hidden_field :location, :value => params[:location] %>
@@ -156,7 +157,7 @@
 				</p>
 				<% end %>
               </div>
-              <div class="col-12 intro_second">
+              <div class="col-6 intro_second">
                 <%= form_for :post, url: '/register/show' do |f| %>
 				<p>
 				  <%= f.hidden_field :location, :value => params[:location] %>
@@ -187,9 +188,9 @@
                 <input type="text" class="form-control" placeholder="返信先メールアドレス">
               </div>
             </div>
-            <div class="col-12 has-default">
-              <div class="form-group textarea">
-                <textarea type="text" class="form-control" placeholder="お問い合わせ内容"></textarea>
+            <div class="col-12">
+              <div class="form-group has-default textarea">
+                <textarea type="text" class="form-control" placeholder="お問い合わせ内容" rows="6"></textarea>
               </div>
             </div>
             <div class="col-12 has-default btn-send-box">
