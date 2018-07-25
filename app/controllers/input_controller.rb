@@ -15,7 +15,7 @@ class InputController < ApplicationController
   end
 
   def show
-  	@location_id = params[:location]
+  	@location_id = params[:post][:location]
   	@umbrellaCount = Kasa.where(location_id: @location_id, state: 1).count
   end
 

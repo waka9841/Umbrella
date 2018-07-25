@@ -1,11 +1,187 @@
-<h1>合言葉を入力</h1>
-<%= form_for :post, url: '/register/done' do |f| %>
-<p>
-  <%= f.text_field :uuid, placeholder: '合言葉を入力してください' %>
-  <%= f.hidden_field :location, :value => params[:post][:location] %>
-</p>
-<p>
-  <%= f.submit('認証') %>
-</p>
-<% end %>
-<%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]) %>
+<body class="index-page sidebar-collapse">
+  <nav class="others_header navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+    <!-- try　-->
+      <div class="navbar-translate others_header">
+          <div class="header_left">
+            <a class="text_link" href="index.html">
+              <p class="others_header">＜</p>
+            </a>
+          </div>
+          <div class="header_mid">
+            <p class="others_header">合言葉を入力する</p>
+          </div>
+          <div class="header_right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    <!-- menu -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="index.html" data-original-title="go to top page">
+              トップページ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#howto" data-original-title="go to how to contents page">
+              使い方
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#character" data-original-title="got to character page">
+              特徴
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#inputs" data-original-title="go to contact page">
+              お問い合わせ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" data-original-title="Follow us on Instagram">
+              マイページ/会員登録
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end menu -->
+    </div>
+  </nav>
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+        <div class="space-100"></div>
+        <!-- contents -->
+        <div class="container">
+          <div class="introduction finish_page">
+            <div class="row">
+              <div class="col-12">
+                <p class="lead_text">設定した合言葉の番号を入力してください。</p>
+                  <div class="space-70"></div>
+                <div class="form-group has-default">
+                	<%= form_for :post, url: '/register/done' do |f| %>
+                	<%= f.text_field :uuid, placeholder: '合言葉を入力する', :class => 'form-control underline_pink' %>
+                	<%= f.hidden_field :location, :value => params[:post][:location] %>
+                </div>
+                <div class="space-30"></div>
+                <div class="col intro_first">
+                	<%= f.submit '次へ進む', :class => 'btn btn-rose btn-round btn-next2' %>
+                	<% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end contents -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, GMO Technology BootCamp Create by Team-G.
+      </div>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--	Plugin for Sharrre btn -->
+  <script src="./assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-kit.js?v=2.0.4" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+    });
+
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+
+
+    $(document).ready(function() {
+
+      $('#facebook').sharrre({
+        share: {
+          facebook: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('facebook');
+        },
+        template: '<i class="fab fa-facebook-f"></i> Facebook',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#googlePlus').sharrre({
+        share: {
+          googlePlus: true
+        },
+        enableCounter: false,
+        enableHover: false,
+        enableTracking: true,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('googlePlus');
+        },
+        template: '<i class="fab fa-google-plus"></i> Google',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#twitter').sharrre({
+        share: {
+          twitter: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        buttons: {
+          twitter: {
+            via: 'CreativeTim'
+          }
+        },
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('twitter');
+        },
+        template: '<i class="fab fa-twitter"></i> Twitter',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+    });
+  </script>
+</body>
