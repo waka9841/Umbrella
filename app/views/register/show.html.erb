@@ -4,7 +4,7 @@
     <!-- try　-->
       <div class="navbar-translate others_header">
           <div class="header_left">
-            <a class="text_link" href="index.html">
+            <a class="text_link" href="/top?location=<%= params[:post][:location] %>">
               <p class="others_header">＜</p>
             </a>
           </div>
@@ -66,16 +66,15 @@
             <div class="row">
               <div class="col-12">
                 <p class="lead_text">設定した合言葉の番号を入力してください。</p>
-                  <div class="space-70"></div>
+                <div class="space-70"></div>
                 <div class="form-group has-default">
                 	<%= form_for :post, url: '/register/done' do |f| %>
                 	<%= f.text_field :uuid, placeholder: '合言葉を入力する', :class => 'form-control underline_pink' %>
                 	<%= f.hidden_field :location, :value => params[:post][:location] %>
-                </div>
-                <div class="space-30"></div>
-                <div class="col intro_first">
-                	<%= f.submit '次へ進む', :class => 'btn btn-rose btn-round btn-next2' %>
-                	<% end %>
+	                <div class="space-50"></div>
+    	            <div class="intro_first">
+                	<%= f.submit '次へ進む', :class => 'btn btn-rose btn-round btn-next2 col intro_first' %>
+                  <% end %>
                 </div>
               </div>
             </div>
