@@ -1,6 +1,171 @@
-<html>
-<title>完了</title>
-<h1>登録完了！</h1>
-<p>合言葉は<%= @result %>です。<br/>入力されるまで忘れずにメモしてください。</p>
-<%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]) %>
-</html>
+<body class="index-page sidebar-collapse">
+  <nav class="others_header navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+    <!-- try　-->
+      <div class="navbar-translate others_header">
+          <div class="header_left">
+            <a class="text_link" href="first_login.html">
+              <p class="others_header">＜</p>
+            </a>
+          </div>
+          <div class="header_mid_finish">
+            <p class="others_header">完了</p>
+          </div>
+          <div class="header_right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    <!-- menu -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="index.html" data-original-title="go to top page">
+              トップページ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#howto" data-original-title="go to how to contents page">
+              使い方
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#character" data-original-title="got to character page">
+              特徴
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#inputs" data-original-title="go to contact page">
+              お問い合わせ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" data-original-title="Follow us on Instagram">
+              マイページ/会員登録
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end menu -->
+    </div>
+  </nav>
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+        <div class="space-100"></div>
+        <!-- contents -->
+        <div class="container">
+          <div class="introduction finish_page">
+            <div class="row">
+              <div class="col-12">
+                <p class="register_number"><%= @result %></p>
+                <p class="announce">登録が<span class="first_finish_color">完了</span>しました</p>
+                <p class="lead_text">番号は忘れずにメモしてください。</p>
+                <p class="lead_text">相手に番号を伝えて、</p>
+                <p class="lead_text">相合傘の準備を進めましょう！</p>
+                <div class="space-70"></div>
+                <div class="lead_text">
+                <%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]), :class=>"text_link lead_text" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end contents -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, GMO Technology BootCamp Create by Team-G.
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+    });
+
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+
+
+    $(document).ready(function() {
+
+      $('#facebook').sharrre({
+        share: {
+          facebook: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('facebook');
+        },
+        template: '<i class="fab fa-facebook-f"></i> Facebook',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#googlePlus').sharrre({
+        share: {
+          googlePlus: true
+        },
+        enableCounter: false,
+        enableHover: false,
+        enableTracking: true,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('googlePlus');
+        },
+        template: '<i class="fab fa-google-plus"></i> Google',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+      $('#twitter').sharrre({
+        share: {
+          twitter: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        buttons: {
+          twitter: {
+            via: 'CreativeTim'
+          }
+        },
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('twitter');
+        },
+        template: '<i class="fab fa-twitter"></i> Twitter',
+        url: 'https://demos.creative-tim.com/material-kit/index.html'
+      });
+
+    });
+  </script>
+</body>

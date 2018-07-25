@@ -6,7 +6,7 @@ class InputController < ApplicationController
   	for num in 1..10 do
   		@location1.kasas.create(state: 1)
   		@location2.kasas.create(state: 1)
-  		@location3.kasas.create(state: 1)  		
+  		@location3.kasas.create(state: 1)
   	end
   end
 
@@ -15,7 +15,7 @@ class InputController < ApplicationController
   end
 
   def show
-  	@location_id = params[:location]
+  	@location_id = params[:post][:location]
   	@umbrellaCount = Kasa.where(location_id: @location_id, state: 1).count
   end
 
