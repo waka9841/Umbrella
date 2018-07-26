@@ -25,7 +25,7 @@ class InputController < ApplicationController
   	if @location
       @validate = @location.tokens.new(uuid: @result, expired_at: 10.minutes.since)
       unless @validate.save
-        redirect_to '/top?location=1'
+        redirect_to "/top?location=#{params[:post][:location]}"
       end
   	end
   end
