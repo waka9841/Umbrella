@@ -6,7 +6,7 @@ class RegisterController < ApplicationController
   	@validate = tokenCheck(params[:post][:uuid], params[:post][:location])
   	@location = Location.find_by(id: params[:post][:location])
   	if @validate
-      @kasa_id =lendUmbrella(@location.kasas.where(state: 1).limit(1))
+      @kasa_id =lendUmbrella(@location.kasas.where(state: 1).order('id'))
       @returnDate = 7.days.since.strftime("%Y年%m月%d日")
     end
   end
@@ -30,8 +30,8 @@ class RegisterController < ApplicationController
   end
 
   def lendUmbrella(kasas)
-  	kasas.state = 2
-  	kasas.save
-  	return kasas.id
+  	kasas.first.state = 2
+  	kasas.first.save
+  	return kasas.first.id
   end
 end
