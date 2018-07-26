@@ -23,7 +23,10 @@ class InputController < ApplicationController
   	@result = params[:post][:uuid]
   	@location = Location.find_by(id: params[:post][:location])
   	if @location
-  		@location.tokens.create(uuid: @result, expired_at: 10.minutes.since)
+      @validate = @location.tokens.new(uuid: @result, expired_at: 10.minutes.since)
+      unless @validate.save
+        redirect_to '/top?location=1'
+      end
   	end
   end
 end
