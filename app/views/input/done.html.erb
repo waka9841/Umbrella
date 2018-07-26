@@ -63,11 +63,17 @@
           <div class="introduction finish_page">
             <div class="row">
               <div class="col-12">
+                <% if @tokenCheck %>
                 <p class="register_number"><%= @result %></p>
                 <p class="announce">登録が<span class="first_finish_color">完了</span>しました</p>
                 <p class="lead_text">番号は忘れずにメモしてください。</p>
                 <p class="lead_text">相手に番号を伝えて、</p>
                 <p class="lead_text">相合傘の準備を進めましょう！</p>
+                <% else %>
+                  <p class="lead_text">合言葉が入力されていないか、</p>
+                  <p class="lead_text">20文字をオーバーしています。</p>
+                  <p class="lead_text">合言葉を入力しなおしてください。</p>
+                <% end %>
                 <div class="space-70"></div>
                 <div class="lead_text">
                 <%= link_to "トップページへ戻る", top_index_path(location: params[:post][:location]), :class=>"text_link lead_text" %>
